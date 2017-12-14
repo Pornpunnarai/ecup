@@ -101,15 +101,15 @@
                       <hr>or<hr>
                   </div>
 
-                  <div class="row">
+                  <div class="row col-md-12">
                       <div class="col-md-4 col-sm-6">
-                          <a href="/osmpoll/facebook-login-api" class="btn"><img src="img/register/loginwithfacebook.png" style="width: 100%;"></a>
+                          <a href="/osmpoll/facebook-login-api"><img src="img/register/fb.JPG" style="width: 70%;"></a>
                       </div>
                       <div class="col-md-4 col-sm-6">
-                          <a href="/osmpoll/google-login-api" class="btn"><img src="img/register/loginwithgoogle.png" style="width: 100%;"></a>
+                          <a href="/osmpoll/google-login-api"><img src="img/register/google.JPG" style="width: 70%;"></a>
                       </div>
                       <div class="col-md-4 col-sm-6">
-                          <a href="/osmpoll/register" class="btn btn-group-sm btn-secondary" style="width: 100%; margin-top: 4%;">Register By Email</a>
+                          <a href="/osmpoll/register"><img src="img/register/email.JPG" style="width: 70%;"></a>
                       </div>
                   </div>
               </div>
