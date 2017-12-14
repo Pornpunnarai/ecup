@@ -10,7 +10,7 @@
     <?php include '../header.php'?>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('../img/1.jpg')">
+    <header class="masthead" style="background-color: whitesmoke; height: 58px;">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
@@ -29,39 +29,75 @@
     <section class="bg-light" id="portfolio">
         <div class="container">
             <br>
-            <div class="row">
-                <div class="col-md-12" style="background-color: lightgray; padding: 20px;">
+            <div class="col-md-12" style="justify-content: center;">
+                <div class="col-md-12" style="background-color:lightgray; padding: 20px;border-radius: 25px;">
                     <br>
-                    <div class="row col-md-12">
-                        <h1 style="justify-content: center">ทำไมถึงซ่อมถนน</h1>
-                        <p>เมืองไทยใครๆก็รัก ใครๆก็อยากสัมผัส
-                            ทะเลบ้านเราก็ติดอับดับต้นๆของโลก ของกินบ้านเราก็ดังไปหลายประเทศ
-
-                            อยากให้รัฐบาลเร่งโปรโมทการท่องเที่ยวให้เข้มข้น
-                            ไช้โอกาสนี้เสนอข่าวให้บ่อยขึ้น เพราะนักมวยคนนี้อมีแฟนๆอยู่ทั่วโลกครับ
-
-                            เงินทองจะได้เข้าประเทศอย่างเต็มไม้เต็มมือ
-                            ทุกวันนี้ จังหวัดต่างๆ ยังไม่ได้โชวของดีอย่างเต็มที่ครับ
-                            ยังมีจุดท่องเที่ยวที่ไม่ได้รับการโฆษณาอยู่หลายจังหวัด
-                            ขอเพียงพยายามเสาะหาทุกจุดในประเทศ แล้วจัดทำไกด์บุ๊คให้นักท่องเที่ยวได้ยลโฉม
-
-                            เพียงเท่านี้ ก็เชื่อว่า ทุกที่ในประเทศ จะมีชาวต่างชาติมาเที่ยวครับ เราจะได้เห็นต่างชาติตามน้ำตกต่างๆ หรือจุดชมวิวต่างๆ ไม่ไช่เห็นแค่แถวๆ สีลม ภูเก็ต หัวหิน พัทยา ครับ
+                    <div class="row col-md-12" style="justify-content: center;">
+                        <h1>หลังเลือกตั้งปีหน้าคิดว่าการเมืองไทยจะเป็นแบบไหน</h1>
+                        <p>สมาชิกราชดำเนินคิดว่า/ประเมินว่า หลังการเลือกตั้งปลายปีหน้า ได้รัฐบาลแล้ว
+                            ทิศทางการเมืองรวมถึงเศรฐกิจของไทยเราจะเป็นไปในทิศทางแบบไหนครับดีขึ้นหรือแย่ลง หรือทรงตัว
                         </p>
                     </div>
-
+                    <hr>
                     <div class="row col-md-12">
                         <table>
-                            <td style="width:35%;border: #868e9608;text-align: left;">Name: Pornpunarai Saimoonkham</td>
-                            <td style="width:30%;border: #868e9608;text-align: left;">Created on: 28/10/2017</td>
-                            <td style="width:10%;border: #868e9608;text-align: right;">View : 50</td>
-                            <td style="width:10%;border: #868e9608;text-align: right;">Reply: 5</td>
-                            <td style="width:10%;border: #868e9608;text-align: right;">VOTE : 2</td>
-                            <td style="width:5%;border: #868e9608;text-align: right;"><i class="fa fa-thumbs-up" aria-hidden="true"></i></td>
+                            <td style="border: #868e9608;text-align: left;">Name: Pornpunarai Saimoonkham Created on: 28/10/2017</td>
+                            <td style="border: #868e9608;text-align: right;">View : 50 Reply: 5 VOTE : 2 <i class="fa fa-thumbs-up" aria-hidden="true"></i></td>
+                        </table>
+                        <div class="col-xs-6">
 
+                        </div>
+                        <div class="col-xs-6">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-12">
+                <div class="col-md-12" style="background-color: #524d4dc2; color: white;padding: 20px;border-radius: 25px;">
+                    <br>
+                    <div class="row col-md-12">
+                        <h4><i class="fa fa-comments-o" aria-hidden="true"></i> ความคิดเห็นที่ 1</h4><br>
+                    </div>
+
+                    <div class="row col-md-12">
+                        <p>ปีหน้า 2561 ไม่มีเลือกตั้ง มีแต่เทือกตั้ง</p>
+                    </div>
+                    <hr>
+                    <div class="row col-md-12">
+                        <table>
+                            <td style="width:50%;border: #868e9608;text-align: left;">Name: Pornpunarai Saimoonkham</td>
+                            <td style="width:50%;border: #868e9608;text-align: right;">Created on: 28/10/2017</td>
                         </table>
                     </div>
-                <br>
+                </div>
             </div>
+            <br>
+
+            <div class="col-md-12">
+                <div class="col-md-12" style="background-color: #dae0e5;padding: 20px;border-radius: 25px;">
+                    <div class="row col-md-12">
+                        <h5>แสดงความคิดเห็น</h5>
+                    </div>
+
+                    <div class="row" style="justify-content: center;">
+                        <div class="col-md-12">
+                            <form>
+                            <textarea class="form-control" rows="6" cols="100" name="comment" form="usrform"
+                                      style="margin-top: 3px;background-color: darkgrey;color: white; width: 100%; font-size: 100%;"></textarea>
+                                <a class="btn btn-warning pull-right" style="padding: 15px;margin-top: 2px;" href="#">ส่งข้อความ</a>
+                            </form>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="row col-md-12">
+                        <table>
+                            <td style="width:50%;border: #868e9608;text-align: left;">Name: Pornpunarai Saimoonkham</td>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
         <hr>
