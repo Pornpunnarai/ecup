@@ -25,7 +25,6 @@
 
     <!-- Main Content -->
 
-
     <section class="bg-light" id="portfolio">
         <div class="container">
             <br>

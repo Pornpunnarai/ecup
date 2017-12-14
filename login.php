@@ -30,8 +30,6 @@
           -moz-background-size: cover;
           background-size: cover;
           -o-background-size: cover;
-
-
       }
       div.col-lg-8.col-md-10.mx-auto {
           position: fixed;
@@ -50,13 +48,56 @@
           z-index: 100;
       }
       input.form-control{
-          background-color: #1e1c1bad;
+          background-color: #1e1c1b4a;
       }
       hr{
           border-top: 1px solid #17a2b8;
           width: 40%;
       }
+      @media only screen and (max-width: 520px) {
+       img{
+           width: 60%;
+           padding: 5px;
+           border-radius: 10px;
+           display: block;
+           margin: auto;
+       }
+      }
+      @media only screen and (min-width: 520px) {
+          img{
+              width: 90%;
+              margin: 10px;
+          }
+      }
+      div.row{
+
+          margin-right: 0px;
+          margin-left: 0px;
+      }
+      /*@media screen and (max-width: 480px) {*/
+
+          /*img {width:50%}*/
+
+      /*}*/
+
   </style>
+
+  <!-- Navigation -->
+  <?php include 'header.php'?>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-color: #f8f9fa96; height: 58px;">
+      <div class="overlay"></div>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-md-10 mx-auto">
+                  <div class="page-heading">
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
 
   <!-- Page Content -->
   <section>
@@ -101,15 +142,15 @@
                       <hr>or<hr>
                   </div>
 
-                  <div class="row col-md-12">
+                  <div class="row">
                       <div class="col-md-4 col-sm-6">
-                          <a href="/osmpoll/facebook-login-api"><img src="img/register/fb.JPG" style="width: 70%;"></a>
+                          <a href="/osmpoll/facebook-login-api"><img src="img/register/fb.JPG"></a>
                       </div>
                       <div class="col-md-4 col-sm-6">
-                          <a href="/osmpoll/google-login-api"><img src="img/register/google.JPG" style="width: 70%;"></a>
+                          <a href="/osmpoll/google-login-api"><img src="img/register/google.JPG"></a>
                       </div>
                       <div class="col-md-4 col-sm-6">
-                          <a href="/osmpoll/register"><img src="img/register/email.JPG" style="width: 70%;"></a>
+                          <a href="/osmpoll/register"><img src="img/register/email.JPG"></a>
                       </div>
                   </div>
               </div>
