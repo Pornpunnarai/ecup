@@ -29,6 +29,32 @@
     <!-- Main Content -->
     <div class="container">
       <div class="row">
+          <div class="panel panel-info">
+              <h2>Contact Us</h2><br>
+
+              <h4>เลขที่ 21/5 ซอย 9(ถนนศิริมังคลาจารย์) ตำบล สุเทพ อำเภอเมือง จังหวัด เชียงใหม่ 50200</h4><br>
+
+              <div class="row col-md-12" id="map" style="justify-content: center; width: 100%;height:400px;background:yellow"></div><br>
+
+              <div class="row">
+                  <div class="col-md-4">
+                      <p><img src="../pic/facebook-icon.png" width="100px"></p>
+                      <p>Facebook.com/chiangmairea</p>
+                  </div>
+
+                  <div class="col-md-4">
+                      <p><img src="../pic/Hamzasaleem-Stock-Mail.ico" width="100px"></p>
+                      <p>chiangmairea@gmail.com</p>
+                  </div>
+
+                  <div class="col-md-4">
+                      <p><img src="../pic/Circle-icons-phone.svg.png" width="100px"></p>
+                      <p>053-213708</p>
+                  </div>
+              </div>
+
+          </div>
+
         <div class="col-lg-8 col-md-10 mx-auto">
           <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
           <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
