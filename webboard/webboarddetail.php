@@ -59,7 +59,26 @@ if (isset($_POST['unliked'])) {
       <?php include '../head.html'?>
       <title>ECUP - WebBoard</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-      <link rel="stylesheet" href="styles.css">
+
+      <style>
+          .post {
+              width: 30%;
+              margin: 10px auto;
+              border: 1px solid #cbcbcb;
+              padding: 5px 10px 0px 10px;
+          }
+          .like, .unlike, .likes_count {
+              color: blue;
+          }
+          .hide {
+              display: none;
+          }
+          .fa-thumbs-up, .fa-thumbs-o-up {
+              transform: rotateY(-180deg);
+              font-size: 1.3em;
+          }
+
+      </style>
   </head>
   <body>
     <!-- Navigation -->
@@ -107,7 +126,8 @@ if (isset($_POST['unliked'])) {
                     <div class="row col-md-12">
                         <table>
                             <td style="border: #868e9608;text-align: left;">Name: <?php echo $objResult["name"];?> Created on: <?php echo $objResult["create_date"];?></td>
-                            <td style="border: #868e9608;text-align: right;">View : <?php echo $objResult["view"];?> Reply: <?php echo $objResult["reply"];?> VOTE : <span class="likes_count"><?php echo $objResult['likes']; ?> </span>
+                            <td style="border: #868e9608;text-align: right;">View : <?php echo $objResult["view"];?> Reply: <?php echo $objResult["reply"];?> VOTE :
+                                <span class="likes_count"><?php echo $objResult['likes']; ?> </span>
 <!--                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>-->
                                 <?php
                                 // determine if user has already liked this post
@@ -202,7 +222,7 @@ if (isset($_POST['unliked'])) {
     <?php include '../footer.php'; include '../allscript.html'?>
 
     <!-- Add Jquery to page -->
-    <script src="jquery.min.js"></script>
+
     <script>
         $(document).ready(function(){
             // when the user clicks on like
@@ -218,7 +238,7 @@ if (isset($_POST['unliked'])) {
                         'webboard_id': webboard_id
                     },
                     success: function(response){
-                        $post.parent().find('span.likes_count').text(response + " likes");
+                        $post.parent().find('span.likes_count').text(response);
                         $post.addClass('hide');
                         $post.siblings().removeClass('hide');
                     }
@@ -238,7 +258,7 @@ if (isset($_POST['unliked'])) {
                         'webboard_id': webboard_id
                     },
                     success: function(response){
-                        $post.parent().find('span.likes_count').text(response + " likes");
+                        $post.parent().find('span.likes_count').text(response);
                         $post.addClass('hide');
                         $post.siblings().removeClass('hide');
                     }
