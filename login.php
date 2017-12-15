@@ -18,69 +18,12 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="css/clean-blog.min.css" rel="stylesheet">
+      <link href="css/clean-blog.min.css" rel="stylesheet">
+      <link href="css/authentication.css" rel="stylesheet">
 
   </head>
 
   <body>
-  <style>
-      body {
-          background: url('img/1.jpg') no-repeat center center fixed;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          background-size: cover;
-          -o-background-size: cover;
-      }
-      div.col-lg-8.col-md-10.mx-auto {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          -webkit-transform: translate(-50%, -50%);
-          -moz-transform: translate(-50%, -50%);
-          -o-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-
-          font-size: 20px;
-          background-color: #e9ecefdb;
-          border-radius: 30px;
-          padding: 5px;
-          z-index: 100;
-      }
-      input.form-control{
-          background-color: #1e1c1b4a;
-      }
-      hr{
-          border-top: 1px solid #17a2b8;
-          width: 40%;
-      }
-      @media only screen and (max-width: 520px) {
-       img{
-           width: 60%;
-           padding: 5px;
-           border-radius: 10px;
-           display: block;
-           margin: auto;
-       }
-      }
-      @media only screen and (min-width: 520px) {
-          img{
-              width: 90%;
-              margin: 10px;
-          }
-      }
-      div.row{
-
-          margin-right: 0px;
-          margin-left: 0px;
-      }
-      /*@media screen and (max-width: 480px) {*/
-
-          /*img {width:50%}*/
-
-      /*}*/
-
-  </style>
 
   <!-- Navigation -->
   <?php include 'header.php'?>
