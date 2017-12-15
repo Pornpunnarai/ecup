@@ -1,8 +1,8 @@
 <?php
 $serverName = "localhost";
 $username = "root";
-$password = "1q2w3e4r";
-$dbName = "pollosm";
+$password = "";
+$dbName = "ecup";
 
 $objCon = mysqli_connect($serverName,$username,$password,$dbName);
 mysqli_set_charset($objCon,"utf8");
