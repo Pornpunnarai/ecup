@@ -5,6 +5,14 @@ body {
     background-size: cover;
     -o-background-size: cover;
 }
+div.col-lg-8.col-md-10 {
+    font-size: 20px;
+    background-color: #e9ecefdb;
+    border-radius: 30px;
+    padding: 5px;
+    z-index: 100;
+}
+
 div.col-lg-8.col-md-10.mx-auto {
     position: fixed;
     top: 50%;
@@ -49,4 +57,38 @@ div.row{
 
     margin-right: 0px;
     margin-left: 0px;
+}
+
+#message,#checkPassword {
+    justify-content: center;
+    display:none;
+    background: red;
+    color: white;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 25px;
+}
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: black;
+}
+
+.valid:before {
+    position: relative;
+    left: -10px;
+    content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: white;
+}
+
+.invalid:before {
+    position: relative;
+    left: -10px;
+    content: "✖";
 }
