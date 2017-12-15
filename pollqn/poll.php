@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,35 +38,37 @@
                 </div>
             </div>
             <div class="row">
+
                 <div class="col-lg-8 col-md-10 mx-auto">
+
+                    <?php include '../connect-mysql.php';
+
+                    $query = "SELECT * FROM pollquestion LIMIT 2";
+                    //SELECT * FROM `pollquestion` ORDER BY createdate DESC LIMIT 3
+                    $sql = mysqli_query($objCon,$query);
+                    $result = array();
+                    mysqli_set_charset($objCon,"utf8");
+                    while ($row_user = mysqli_fetch_assoc($sql)){ $result[] = $row_user;}
+
+                    foreach ($result as &$value) {
+                    ?>
+
                     <div class="post-preview">
                         <a href="post.html">
                             <h2 class="post-title">
-                                Science has not yet mastered prophecy
+                                <?php echo $value["name"]; ?>
                             </h2>
                             <h3 class="post-subtitle">
-                                We predict too much for the next year and yet far too little for the next ten.
+                                <?php echo $value["detail"]; ?>
                             </h3>
                         </a>
-                        <p class="post-meta">Created
-                            <a href="#">Start Bootstrap</a>
-                            on August 24, 2017</p>
+                        <p class="post-meta">Created On
+                            <a href="#"><?php echo $value["createdate"]; ?></a></p>
                     </div>
                     <hr>
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">
-                                Failure is not an option
-                            </h2>
-                            <h3 class="post-subtitle">
-                                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                            </h3>
-                        </a>
-                        <p class="post-meta">Created
-                            <a href="#">Start Bootstrap</a>
-                            on July 8, 2017</p>
-                    </div>
-                    <hr>
+                        <?php
+                    }
+                    ?>
                     <!-- Pager -->
                     <div class="clearfix">
                         <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
@@ -73,9 +77,7 @@
                 </div>
             </div>
         </div>
-<!--        <div class="form-group">-->
-<!--            <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>-->
-<!--        </div>-->
+
     </section>
     <br>
     <section class="bg-light" id="Questionare">
