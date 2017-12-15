@@ -20,7 +20,6 @@
     <!-- Custom styles for this template -->
       <link href="css/clean-blog.min.css" rel="stylesheet">
       <link href="css/authentication.css" rel="stylesheet">
-
   </head>
 
   <body>
@@ -31,15 +30,6 @@
   <!-- Page Header -->
   <header class="masthead" style="background-color: #f8f9fa96; height: 58px;">
       <div class="overlay"></div>
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-md-10 mx-auto">
-                  <div class="page-heading">
-
-                  </div>
-              </div>
-          </div>
-      </div>
   </header>
 
   <!-- Page Content -->
@@ -48,7 +38,7 @@
           <div class="row">
               <div class="col-lg-8 col-md-10 mx-auto">
                   <div class="col-md-12">
-                      <br><h3 style="text-align: center">Please Sign In</h3>
+                      <br><h3 style="text-align: center">Sign In</h3>
 
                       <form class="form-horizontal" method="post" action="check_login.php">
                           <div class="input-group">
@@ -93,7 +83,7 @@
                           <a href="/osmpoll/google-login-api"><img src="img/register/google.JPG"></a>
                       </div>
                       <div class="col-md-4 col-sm-6">
-                          <a href="/osmpoll/register"><img src="img/register/email.JPG"></a>
+                          <a href="register.php"><img src="img/register/email.JPG"></a>
                       </div>
                   </div>
               </div>
