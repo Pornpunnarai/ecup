@@ -80,6 +80,6 @@
 <script src="/js/vendor/popper.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/script.js"></script>
-<script src="registerjavascript.js"></script>
+<script src="../js/registerValidate.js"></script>
 </body>
 </html>
