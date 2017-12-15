@@ -25,9 +25,6 @@ if(!isset($_SESSION))
   $Page = isset($_GET['Page']) ? $_GET['Page'] : '';
   if(!$Page)
   {
-//
-//if(!$_GET["Page"])
-//{
       $Page=1;
   }
 

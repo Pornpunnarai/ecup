@@ -127,9 +127,13 @@ if (isset($_POST['unliked'])) {
                 <div class="col-md-12" style="background-color:lightgray; padding: 20px;border-radius: 25px;">
                     <br>
                     <div class="row col-md-12" style="justify-content: center;">
-                        <h1><?php echo $objResult["question"];?></h1>
-                        <p><?php echo $objResult["details"];?>
-                        </p>
+                        <div class="col-md-12" style="height: auto">
+                            <h1><?php echo $objResult["question"];?></h1>
+                        </div>
+                        <div class="col-md-12">
+                            <p><?php echo $objResult["details"];?></p>
+                        </div>
+
                     </div>
                     <hr>
                     <div class="row col-md-12">
@@ -140,8 +144,6 @@ if (isset($_POST['unliked'])) {
 <!--                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>-->
                                 <?php
                                 // determine if user has already liked this post
-
-
                                 if(isset($_SESSION["User_ID"]))
                                 {
                                 $results = mysqli_query($objCon, "SELECT * FROM likes WHERE user_id=$user_id AND webboard_id='".$objResult['id']."'");

@@ -22,29 +22,75 @@ if($strAction == "Save")
 ?>
 <html>
 <head>
-<title>ThaiCreate.Com</title>
+    <?php include '../head.html'?>
+    <title>ECUP - Add WebBoard</title>
 </head>
 <body>
-<?php
-?>
+<!-- Navigation -->
+<?php include '../header.php'?>
 
-<form action="newtopic.php?Action=Save" method="post" name="frmMain" id="frmMain">
-  <table width="621" border="1" cellpadding="1" cellspacing="1">
-    <tr>
-      <td>Question</td>
-      <td><input name="txtQuestion" type="text" id="txtQuestion" value="" size="70"></td>
-    </tr>
-    <tr>
-      <td width="78">Details</td>
-      <td><textarea name="txtDetails" cols="50" rows="5" id="txtDetails"></textarea></td>
-    </tr>
-    <tr>
-      <td>Name : <?php echo $_SESSION["Name"];?></td>
-    </tr>
-  </table>
-  
-  <input name="btnSave" type="submit" id="btnSave" value="Submit">
-</form>
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('../img/Team-Meeting.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="page-heading">
+                    <h1>Web Board</h1>
+                    <span class="subheading">Enjoy to create a Web Board!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<section class="bg-light" id="portfolio">
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="col-md-12" style="background-color: #524d4d8a; color: white;padding: 20px;border-radius: 25px;">
+                    <form action="newtopic.php?Action=Save" method="post" name="frmMain" id="frmMain">
+                        <form action="newtopic.php?Action=Save" method="post" name="frmMain" id="frmMain">
+                            <div class="row col-md-12">
+                                <div class="col-md-2">
+                                    Topic
+                                </div>
+                                <div class="col-md-10">
+                                    <input class="form-control" style="background-color: #495066; color: white" name="txtQuestion" type="text" id="txtQuestion" value="">
+                                </div>
+                            </div>
+                            <div class="row col-md-12">
+                                <div class="col-md-2">
+                                    Details
+                                </div>
+                                <div class="col-md-10">
+                                    <textarea class="form-control" rows="6" cols="100" id="txtDetails" name="txtDetails" style="margin-top: 3px;
+                                    background-color: #495066;color: white; font-size: 100%;"></textarea>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="row col-md-12">
+                                <div class="col-md-6">
+                                    Name : <?php echo $_SESSION["Name"];?>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="btn btn-warning pull-right" name="btnSave" type="submit" id="btnSave" value="Submit">
+                                </div>
+                            </div>
+                        </form>
+                    </form>
+                </div>
+
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+
 </body>
 </html>
 <?php
