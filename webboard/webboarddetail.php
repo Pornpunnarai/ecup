@@ -1,9 +1,18 @@
 <?php
 include '../connect-mysql.php';
-session_start();
-$_SESSION["UserID"] = (int)1;
-$user_id = $_SESSION["UserID"];
-//session_destroy();
+if(!isset($_SESSION))
+{
+    session_start();
+}
+
+ if(isset($_SESSION["User_ID"]))
+ {
+     $user_id = $_SESSION["User_ID"];
+ }
+ else
+ {
+     $user_id = null;
+ }
 
 if(isset($_GET["Action"]))
 {
@@ -12,7 +21,7 @@ if(isset($_GET["Action"]))
         $strSQL = "INSERT INTO reply ";
         $strSQL .="(question_id,details,name) ";
         $strSQL .="VALUES ";
-        $strSQL .="('".$_GET["QuestionID"]."','".$_POST["txtDetails"]."','".$_SESSION["UserID"]."') ";
+        $strSQL .="('".$_GET["QuestionID"]."','".$_POST["txtDetails"]."','".$_SESSION["Name"]."') ";
         $objQuery = mysqli_query($objCon,$strSQL);
         echo $strSQL;
         //*** Update Reply ***//
@@ -82,7 +91,7 @@ if (isset($_POST['unliked'])) {
   </head>
   <body>
     <!-- Navigation -->
-    <?php include '../header.php';
+    <?php require_once '../header.php';
     //*** Select Question ***//
     $strSQL = "SELECT * FROM webboard  WHERE id = '".$_GET["QuestionID"]."' ";
     $objQuery = mysqli_query($objCon,$strSQL) or die ("Error Query [".$strSQL."]");
@@ -119,7 +128,7 @@ if (isset($_POST['unliked'])) {
                     <br>
                     <div class="row col-md-12" style="justify-content: center;">
                         <h1><?php echo $objResult["question"];?></h1>
-                        <p><?php echo nl2br($objResult["details"]);?>
+                        <p><?php echo $objResult["details"];?>
                         </p>
                     </div>
                     <hr>
@@ -131,6 +140,10 @@ if (isset($_POST['unliked'])) {
 <!--                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>-->
                                 <?php
                                 // determine if user has already liked this post
+
+
+                                if(isset($_SESSION["User_ID"]))
+                                {
                                 $results = mysqli_query($objCon, "SELECT * FROM likes WHERE user_id=$user_id AND webboard_id='".$objResult['id']."'");
 
                                 if (mysqli_num_rows($results) == 1 ): ?>
@@ -142,6 +155,11 @@ if (isset($_POST['unliked'])) {
                                     <span class="like fa fa-thumbs-o-up" data-id="<?php echo $objResult['id']; ?>"></span>
                                     <span class="unlike hide fa fa-thumbs-up" data-id="<?php echo $objResult['id']; ?>"></span>
                                 <?php endif ?>
+                                    <?php
+                                    }
+                                    else{?>
+                                        <i class="fa fa-thumbs-up"></i>
+                                <?php }?>
 
                             </td>
                         </table>
@@ -188,7 +206,8 @@ if (isset($_POST['unliked'])) {
             }
             ?>
             <br>
-
+<?php  if(isset($_SESSION["User_ID"]))
+{?>
             <div class="col-md-12">
                 <div class="col-md-12" style="background-color: #dae0e5;padding: 20px;border-radius: 25px;">
                     <div class="row col-md-12">
@@ -208,11 +227,12 @@ if (isset($_POST['unliked'])) {
                     <hr>
                     <div class="row col-md-12">
                         <table>
-                            <td style="width:50%;border: #868e9608;text-align: left;">Name: <?php  echo $_SESSION["UserID"]?></td>
+                            <td style="width:50%;border: #868e9608;text-align: left;">Name: <?php  echo $_SESSION["Name"]?></td>
                         </table>
                     </div>
                 </div>
             </div>
+            <?php } ?>
         </div>
         <hr>
     </section>

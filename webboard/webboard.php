@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION))
+{
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,7 +76,11 @@
             <br>
             <div class="row">
                 <div class="col-md-12" style="text-align: right">
-                    <button class="btn-sm btn-primary" type="button">ตั้งกระทูใหม่้</button>
+                    <?php if(isset($_SESSION["User_ID"])){ ?>
+                    <form action="newtopic.php">
+                    <button class="btn-sm btn-primary" type="submit">ตั้งกระทูใหม่</button>
+                    </form>
+                    <?php } ?>
                 </div>
             </div>
             <br>
@@ -105,6 +115,30 @@
                         ?>
                         </tr>
                     </table>
+                    <br>
+                    Total <?= $Num_Rows;?> Record : <?=$Num_Pages;?> Page :
+                    <?php
+                    if($Prev_Page)
+                    {
+                        echo " <a href='$_SERVER[SCRIPT_NAME]?Page=$Prev_Page'><< Back</a> ";
+                    }
+
+                    for($i=1; $i<=$Num_Pages; $i++){
+                        if($i != $Page)
+                        {
+                            echo "[ <a href='$_SERVER[SCRIPT_NAME]?Page=$i'>$i</a> ]";
+                        }
+                        else
+                        {
+                            echo "<b> $i </b>";
+                        }
+                    }
+                    if($Page!=$Num_Pages)
+                    {
+                        echo " <a href ='$_SERVER[SCRIPT_NAME]?Page=$Next_Page'>Next>></a> ";
+                    }
+                    mysqli_close($objCon);
+                    ?>
                 </div>
                 <br>
             </div>

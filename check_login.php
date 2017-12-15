@@ -25,12 +25,12 @@ else
         session_write_close();
 
         echo "<script type='text/javascript'>alert('Login Successful! Welcome to E-cup Website')</script>";
-        echo "<script>setTimeout(\"location.href = '/osmpoll/survay';\",2000);</script>";
+        echo "<script>setTimeout(\"location.href = '/ecup/';\",2000);</script>";
     }
     else
     {
         echo "<script type='text/javascript'>alert('Login Failed! Please Verify you Email Address')</script>";
-        echo "<script>setTimeout(\"location.href = '/osmpoll/index.php';\",2000);</script>";
+        echo "<script>setTimeout(\"location.href = '/ecup/login.php';\",2000);</script>";
 
         //echo "fail";
     }

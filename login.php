@@ -65,7 +65,7 @@
                           </div>
 
                           <div class="spacing" style="text-align: center;">
-                              <a href="#" class="btn btn-warning" style="margin: 5px;" href="#">Sign In</a>
+                              <button name="submit" class="btn btn-warning" style="margin: 5px;">Sign In</button>
                           </div>
                       </form>
 
