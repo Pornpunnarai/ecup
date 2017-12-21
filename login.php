@@ -77,15 +77,16 @@
 
                   <div class="row">
                       <div class="col-md-4 col-sm-6">
-                          <a href="/osmpoll/facebook-login-api"><img src="img/register/fb.JPG"></a>
+                          <a href="/ecup/facebook-login-api"><img src="img/register/fb.JPG"></a>
                       </div>
                       <div class="col-md-4 col-sm-6">
-                          <a href="/osmpoll/google-login-api"><img src="img/register/google.JPG"></a>
+                          <a href="/ecup/google-login-api"><img src="img/register/google.JPG"></a>
                       </div>
                       <div class="col-md-4 col-sm-6">
                           <a href="../ecup/register"><img src="img/register/email.JPG"></a>
                       </div>
                   </div>
+
               </div>
               </div>
           </div>
