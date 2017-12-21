@@ -62,12 +62,12 @@
     <br>
 
     <section class="p-0" id="activity">
-        <br><h3 class="text-center text-uppercase">Activity</h3><br>
+        <br><h3 class="text-center text-uppercase"> Top 6 Activity</h3><br>
         <div class="container-fluid p-0">
 
             <?php include 'connect-mysql.php';
 
-            $query = "SELECT * FROM activity";
+            $query = "SELECT * FROM activity LIMIT 6";
             $sql = mysqli_query($objCon,$query);
             $result = array();
             mysqli_set_charset($objCon,"utf8");

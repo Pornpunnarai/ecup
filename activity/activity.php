@@ -51,7 +51,7 @@
                 ?>
 
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal">
+                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal<?php echo $value["id"];?>">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -60,8 +60,7 @@
                         <?php echo '<img class="img-fluid" src="data:image/jpeg;base64,'.base64_encode( $value['pic'] ).'"/>';?>
                     </a>
                     <div class="portfolio-caption">
-                        <h4><?php echo $value["name"];
-                            ?></h4>
+                        <h4><?php echo $value["name"];?></h4>
                         <p class="text-muted"><?php echo $value["detail"]; ?></p><br>
                         <a href="#" class="btn-sm btn-warning">Read More</a>
                     </div>
@@ -78,9 +77,11 @@
     <?php include '../footer.php'?>
 
     <!-- Portfolio Modals -->
-
+    <?php
+    foreach ($result as &$value) {
+    ?>
     <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal<?php echo $value["id"];?>" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -112,7 +113,9 @@
             </div>
         </div>
     </div>
-
+        <?php
+    }
+    ?>
   <?php include '../allscript.html'?>
 
   </body>
