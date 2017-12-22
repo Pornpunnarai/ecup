@@ -26,7 +26,7 @@ if(isset($_GET["Action"]))
         echo $strSQL;
         //*** Update Reply ***//
         $strSQL = "UPDATE webboard ";
-        $strSQL .="SET reply = reply + 1 WHERE question_id = '".$_GET["QuestionID"]."' ";
+        $strSQL .="SET reply = reply + 1 WHERE id = '".$_GET["QuestionID"]."' ";
         $objQuery = mysqli_query($objCon,$strSQL);
         header("location:webboarddetail.php?QuestionID=".$_GET["QuestionID"]."");
 
