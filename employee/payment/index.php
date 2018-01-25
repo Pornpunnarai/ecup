@@ -8,13 +8,11 @@
 
 <body style="background: url('../../img/Team-Meeting.jpg') no-repeat center center fixed;">
 <!-- Navigation -->
-<?php include '../../header.php';
+<?php include '../header.php';
 include '../../connect-mysql.php';
 ?>
 
-<header class="masthead" style="background-color: #f8f9fa96; height: 58px;">
-    <div class="overlay"></div>
-</header>
+<br>
 
 <section>
     <div class="container">
@@ -43,7 +41,7 @@ include '../../connect-mysql.php';
                             <select name="activity">
                                 <option value="">Select Activity</option>
                                 <?php
-                                $strSQL = "SELECT * FROM project ORDER BY id ASC";
+                                $strSQL = "SELECT * FROM activity ORDER BY id ASC";
                                 $objQuery = mysqli_query($objCon,$strSQL);
                                 while( $objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC))
                                 {
@@ -63,7 +61,7 @@ include '../../connect-mysql.php';
                         </div>
 
                         <div class="spacing" style="text-align: center;">
-                            <button name="submit" class="btn btn-warning">Sign Up</button>
+                            <button name="submit" class="btn btn-warning">Submit</button>
 <!--                            <a class="btn btn-warning" style="margin: 5px;">Sign Up</a>-->
                         </div>
                     </form>

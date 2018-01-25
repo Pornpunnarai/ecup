@@ -36,7 +36,7 @@
             <br>
             <?php include '../connect-mysql.php';
 
-            $query = "SELECT * FROM activity";
+            $query = "SELECT * FROM project";
             $sql = mysqli_query($objCon,$query);
             $result = array();
             mysqli_set_charset($objCon,"utf8");
@@ -61,7 +61,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4><?php echo $value["name"];?></h4>
-                        <p class="text-muted"><?php echo $value["detail"]; ?></p><br>
+                        <p class="text-muted"><?php echo $value["project"]; ?></p><br>
                         <a href="#" class="btn-sm btn-warning">Read More</a>
                     </div>
                 </div>
@@ -97,9 +97,13 @@
                                 <h2 class="text-uppercase"><?php echo $value["name"]; ?></h2>
 <!--                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>-->
                                 <?php echo '<img class="img-fluid d-block mx-auto" src="data:image/jpeg;base64,'.base64_encode( $value['pic'] ).'" alt=""/>';?>
-                                <p><?php echo $value["detail"]; ?></p>
+                                <p><?php echo "Year: ".$value["year"]; ?></p>
+                                <p><?php echo "Location: ".$value["location"]; ?></p>
+                                <p><?php echo "Client: ".$value["client"]; ?></p>
+                                <p><?php echo "Main project features: ".$value["project"]; ?></p>
+                                <p><?php echo "Positions held: ".$value["positions"]; ?></p>
+                                <p><?php echo "Activities performed: ".$value["activities"]; ?></p>
                                 <ul class="list-inline">
-                                    <li>Date: <?php echo $value["createdate"]; ?></li>
 <!--                                    <li>Client: Threads</li>-->
 <!--                                    <li>Category: Illustration</li>-->
                                 </ul>

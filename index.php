@@ -67,7 +67,7 @@
 
             <?php include 'connect-mysql.php';
 
-            $query = "SELECT * FROM activity LIMIT 6";
+            $query = "SELECT * FROM project LIMIT 6";
             $sql = mysqli_query($objCon,$query);
             $result = array();
             mysqli_set_charset($objCon,"utf8");

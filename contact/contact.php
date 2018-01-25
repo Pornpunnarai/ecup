@@ -61,6 +61,61 @@
         </div>
     </section>
 
+    <section class="bg-light" id="whoami" style="padding: 10vh;">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-8 mx-auto text-center cta">
+                    <h2 class="section-heading text-black" style="margin: 5vh;">E-Cup TEAM</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <section class="p-0" id="activity">
+        <div class="container-fluid p-3">
+
+            <?php include '../connect-mysql.php';
+
+            $query = "SELECT * FROM project LIMIT 6";
+            $sql = mysqli_query($objCon,$query);
+            $result = array();
+            mysqli_set_charset($objCon,"utf8");
+            while ($row_user = mysqli_fetch_assoc($sql)){
+                $result[] = $row_user;
+            }
+            ?>
+
+            <div class="row no-gutters popup-gallery">
+
+                <?php
+                foreach ($result as &$value) {
+                    ?>
+                    <div class="col-lg-4 col-sm-6" style="justify-content: center; text-align: center;">
+                        <a class="col-md-12" href="<?php echo 'data:image/jpeg;base64,'.base64_encode( $value['pic'] ).''?>" alt="<?php echo $value["name"]?>">
+                            <?php echo '
+                        <img class="circle" src="data:image/jpeg;base64,'.base64_encode( $value['pic'] ).'" alt="echo $value["name"]">
+                        ' ;?>
+                        </a>
+                        <div class="circleDescription">
+                            <p class="des text-uppercase" style="margin-top: 13vh; font-weight: 800;">
+                                <b>Pornpunnarai</b>
+                            </p>
+                            <p class="des" style="margin-top: -3vh;">
+                                Programmer
+                            </p>
+                        </div>
+                        <br>
+                    </div>
+
+                    <?php
+                }
+                ?>
+            </div>
+
+        </div>
+    </section>
+
 <!-- Main Content -->
 <!--    <div class="container">
 <!--      <div class="row">
@@ -107,6 +162,15 @@
 <!--        </div>-->
 <!--      </div>-->
 <!--    </div>-->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="../vendor/scrollreveal/scrollreveal.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/clean-blog.min.js"></script>
+    <script src="../js/creative.min.js"></script>
 
     <hr>
 

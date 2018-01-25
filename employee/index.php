@@ -2,6 +2,7 @@
 <html lang="en">
 
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -18,137 +19,70 @@
 
     <!-- Custom styles for this template -->
       <link href="../css/clean-blog.min.css" rel="stylesheet">
-      <link href="../css/style.css" rel="stylesheet">
-      <link href="../css/employee.css" rel="stylesheet">
-
-      <style>
-          .circle{ /* ชื่อคลาสต้องตรงกับ <img class="circle"... */
-              height: 20vh;
-              width: 20vh; /* ความสูงปรับให้เป็นออโต้ */
-              border: 3px solid #fff; /* เส้นขอบขนาด 3px solid: เส้น #fff:โค้ดสีขาว */
-              border-radius: 80%; /* ปรับเป็น 50% คือความโค้งของเส้นขอบ*/
-              box-shadow: 0 0 5px #0085a1;
-          }
-
-          .circleDescription{ /* ชื่อคลาสต้องตรงกับ <img class="circle"... */
-              height: 30vh;
-              width: 30vh;  /* ความสูงปรับให้เป็นออโต้ */
-              border: 3px solid #fff; /* เส้นขอบขนาด 3px solid: เส้น #fff:โค้ดสีขาว */
-              border-radius: 80%; /* ปรับเป็น 50% คือความโค้งของเส้นขอบ*/
-              box-shadow: 0 0 5px #17a2b8;
-              background-color: #97d4eea6;
-              margin-left: auto!important;
-              margin-right: auto!important;
-              margin-top: -20%;
-          }
-      </style>
+      <link href="../css/authentication.css" rel="stylesheet">
   </head>
 
-  <body id="page-top">
+  <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="/ecup/employee/index.php">E-CUP</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fa fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Management</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-warning" href="/ecup/logout.php">Logout</a>
-                    </li>
+  <!-- Navigation -->
+  <?php include 'header.php'?>
 
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Page Header -->
-    <header class="masthead" style="background-image: url('../img/employee/employee_banner.jpg')">
-      <div class="overlay"></div>
+  <!-- Page Content -->
+  <section>
       <div class="container">
-        <div class="row">
-        </div>
+          <div class="row">
+              <div class="col-lg-8 col-md-10 mx-auto">
+                  <div class="col-md-12">
+                      <br><h3 style="text-align: center">For Employee Sign In</h3>
+
+                      <form class="form-horizontal" method="post" action="check_login.php">
+                          <div class="input-group">
+                              <input type="text" class="form-control" name="txtUsername" placeholder="USERNAME" required="required">
+                              <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                          </div>
+                          <div class="input-group">
+                              <input type="password" class="form-control" id="txtPassword" name="txtPassword" placeholder="PASSWORD"
+                                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                     title="Must contain at least one number and one uppercase and lowercase letter,and at least 8 or more characters"
+                                     required>
+                              <span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+                          </div>
+
+                          <div class="spacing" style="text-align: center;">
+                              <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+                              <small> <b>Remember me</b></small>
+                          </div>
+
+                          <div class="spacing" style="text-align: center;">
+                              <a href="register/forgotpassword.php">
+                                  <small><b>Forgot Password?</b> </small>
+                              </a>
+                          </div>
+
+                          <div class="spacing" style="text-align: center;">
+                              <button name="submit" class="btn btn-warning" style="margin: 5px;">Sign In</button>
+                          </div>
+                      </form>
+
+                  </div>
+
+                  <div class="row">
+                      <hr>or<hr>
+                  </div>
+
+
+              </div>
+              </div>
+          </div>
       </div>
-    </header>
-<br>
-    <!-- Main Content -->
-    <section class="bg-light" id="whoami" style="padding: 10vh;">
-        <div class="container">
-            <div class="row ">
-                <div class="col-lg-8 mx-auto text-center cta">
-                    <h2 class="section-heading text-black" style="margin: 5vh;">E-Cup TEAM</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-    <br>
+  </section>
 
-    <section class="p-0" id="activity">
-        <div class="container-fluid p-3">
-
-            <?php include '../connect-mysql.php';
-
-            $query = "SELECT * FROM activity LIMIT 6";
-            $sql = mysqli_query($objCon,$query);
-            $result = array();
-            mysqli_set_charset($objCon,"utf8");
-            while ($row_user = mysqli_fetch_assoc($sql)){
-                $result[] = $row_user;
-            }
-            ?>
-
-            <div class="row no-gutters popup-gallery">
-
-                <?php
-                foreach ($result as &$value) {
-                    ?>
-                <div class="col-lg-4 col-sm-6" style="justify-content: center; text-align: center;">
-                    <a class="col-md-12" href="<?php echo 'data:image/jpeg;base64,'.base64_encode( $value['pic'] ).''?>" alt="<?php echo $value["name"]?>">
-                        <?php echo '
-                        <img class="circle" src="data:image/jpeg;base64,'.base64_encode( $value['pic'] ).'" alt="echo $value["name"]">
-                        ' ;?>
-                    </a>
-                    <div class="circleDescription">
-                        <p class="des text-uppercase" style="margin-top: 13vh; font-weight: 800;">
-                            <b>Pornpunnarai</b>
-                        </p>
-                        <p class="des" style="margin-top: -3vh;">
-                            Programmer
-                        </p>
-                    </div>
-                    <br>
-                </div>
-
-                <?php
-                }
-                ?>
-            </div>
-
-        </div>
-    </section>
-<br>
-
-    <!-- Footer -->
-    <?php include '../footer.php'?>
-
-    <!-- Bootstrap core JavaScript -->
+   <!-- Bootstrap core JavaScript -->
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="../vendor/scrollreveal/scrollreveal.min.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="../js/clean-blog.min.js"></script>
-    <script src="../js/creative.min.js"></script>
 
   </body>
 
